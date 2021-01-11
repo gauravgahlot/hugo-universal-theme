@@ -69,19 +69,30 @@
 <!-- *** COPYRIGHT ***
 _________________________________________________________ -->
 
-<div id="copyright">
+<div id="copyright" style="padding: 10px 0px;">
     <div class="container">
         <div class="col-md-12">
-            {{ if isset .Site.Params "copyright" }}
-            <p class="pull-left">{{ .Site.Params.copyright | safeHTML }}</p>
-            {{ end }}
+            <div class="pull-left">
+                <a href="//www.dmca.com/Protection/Status.aspx?ID=38a3cca0-f677-4863-b299-7ab8cd891b92" 
+                    title="DMCA.com Protection Status" class="dmca-badge">
+                    <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=38a3cca0-f677-4863-b299-7ab8cd891b92" 
+                        alt="DMCA.com Protection Status" />
+                </a>
+                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+    
+                {{ if isset .Site.Params "copyright" }}
+                    <p>{{ .Site.Params.copyright | safeHTML }}</p>
+                {{ end }}
+    
+            </div>
+            
             <p class="pull-right">
               {{ i18n "templateBy" | markdownify }} <a href="https://bootstrapious.com/p/universal-business-e-commerce-template">Bootstrapious</a>.
               <!-- Not removing this link is part of the licence conditions of the template. Thanks for understanding :) -->
 
               {{ i18n "portedBy" | markdownify }} <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>.
             </p>
-        </div>
+        </div>        
     </div>
 </div>
 <!-- /#copyright -->
