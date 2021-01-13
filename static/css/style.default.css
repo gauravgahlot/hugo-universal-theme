@@ -1639,7 +1639,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 .box-image-text .content h3,
 .box-image-text .content h4 {
-  text-transform: uppercase;
+  /* text-transform: uppercase;   // do not transform heading */
   line-height: 1.5;
   color: #555555;
   font-weight: 800;
@@ -1734,7 +1734,8 @@ fieldset[disabled] .btn-template-primary.active {
 }
 #heading-breadcrumbs {
   background: url('../img/texture-bw.png') center center repeat;
-  padding: 20px 0;
+  /* padding: 20px 0;   // change header breadcrumbs padding to 50px*/
+  padding: 50px 0;
   margin-bottom: 40px;
 }
 #heading-breadcrumbs.no-mb {
@@ -1742,7 +1743,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 #heading-breadcrumbs h1 {
   color: #333333;
-  text-transform: uppercase;
+  /* text-transform: uppercase;  // do not transform heading */
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -2057,7 +2058,7 @@ fieldset[disabled] .btn-template-primary.active {
   margin-bottom: 60px;
 }
 #blog-listing-medium .post h2 {
-  text-transform: uppercase;
+  /* text-transform: uppercase;   // do not transform heading */
   margin: 0 0 10px;
   font-size: 24px;
   letter-spacing: 0.08em;
@@ -2584,7 +2585,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 #footer .blog-entries .item .name h5 {
   margin: 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase;   // do not transform heading */
   letter-spacing: 0.08em;
   font-size: 12px;
 }
@@ -3159,7 +3160,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 /* scaffolding */
 body {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.42857143;
   color: #555555;
 }
