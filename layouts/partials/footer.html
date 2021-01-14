@@ -42,6 +42,17 @@
 
         </div>
         <!-- /.col-md-4 -->
+        
+        {{ if isset .Site.Params "latest_video" }}
+        <div class="col-md-4 col-sm-6">
+            <h4>Latest Video</h4>
+
+            {{ .Site.Params.latest_video | safeHTML }}
+            
+            <hr class="hidden-md hidden-lg hidden-sm">
+        </div>        
+        <!-- /.col-md-4 -->
+        {{ end }}
 
         {{ if isset .Site.Params "address" }}
         <div class="col-md-4 col-sm-6">
