@@ -1,0 +1,45 @@
+{{ if isset .Site.Params "recognitions" }}
+{{ if .Site.Params.recognitions.enable }}
+{{ if gt (len .Site.Data.recognitions) 0 }}
+<section class="bar background-gray no-mb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading text-center">
+                    <h2>{{ .Site.Params.recognitions.title | markdownify }}</h2>
+                    <br><br>
+                    <p class="lead">
+                        {{ .Site.Params.recognitions.subtitle | markdownify }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        {{ range $index, $element := sort .Site.Data.recognitions "weight" }}
+        {{ if eq (mod $index 3) 0 }}
+        <div class="col-md-12">
+            <div class="row">
+                {{ end }}
+                <div class="col-md-4">
+                    <div class="box-simple">
+                        {{ with $element.url }}
+                            <a href="{{ $element.url }}" target="_blank">
+                                <img src="{{ $element.image }}" alt="{{ $element.name }}" class="img-responsive" />
+                            </a>                       
+                        {{ end }}
+                        <h3>{{ $element.name | markdownify }}</h3>
+                        <p>{{ $element.description | markdownify }}</p>
+                    </div>
+                </div>
+                {{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.recognitions) 1 )) }}
+            </div>
+        </div>
+        {{ end }}
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+{{ end }}
+{{ end }}
