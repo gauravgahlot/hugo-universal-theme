@@ -12,6 +12,13 @@
                         <div class="col-sm-5 right">
                             <h1>{{ .title }}</h1>
                             {{ .description | safeHTML }}
+                            
+                            {{ if eq .status "open" }}
+                                <br>
+                                <p class="read-more">
+                                    <a href="{{ .url }}" target="_blank" class="btn btn-template-main">Register Here</a>
+                                </p>
+                            {{ end }}
                         </div>
                         <div class="col-sm-7">
                             <img class="img-responsive" src="{{ .image }}" alt="">
