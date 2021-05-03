@@ -21,7 +21,13 @@
                             {{ end }}
                         </div>
                         <div class="col-sm-7">
-                            <img class="img-responsive" src="{{ .image }}" alt="">
+                            {{ if .image }}
+                                <img class="img-responsive" src="{{ .image }}" alt="">
+                            {{ end }}
+
+			    {{ if .video }}
+			        {{ .video | safeHTML }}
+			    {{ end}}
                         </div>
                     </div>
                 </div>
